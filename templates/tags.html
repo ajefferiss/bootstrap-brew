@@ -3,8 +3,25 @@
 {% block title %}{{ SITENAME }} - Tags{% endblock %}
 
 {% block content %}
+<div id="tags">
     <h1>Tags for {{ SITENAME }}</h1>
-    {%- for tag, articles in tags|sort %}
-        <li><a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a> ({{ articles|count }})</li>
-    {% endfor %}
+    <div class="panel-group" id="accordion">
+        {%- for tag, articles in tags|sort %}
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse-{{tag.slug}}">{{ tag }} <span class="badge pull-right">{{ articles|count }}</span></a>
+                </h4>
+            </div>
+            <div id="collapse-{{tag.slug}}" class="panel-collapse collapse">
+                <div class="panel-body">
+                    {% for article in articles %}
+                    <p><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></p>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
