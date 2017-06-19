@@ -15,7 +15,7 @@ This theme uses the standard Pelican settings:
 	* `MENU_ITEMS`
 	* `LINKS` : TODO
 * Analytics & Comments
-	* `DISQUS` can be used by adding the `DISQUS_SITENAME` variable into either your `pelicanconf.py` or `publishconf.py` files
+	* `DISQUS` can be used for comments by adding the `DISQUS_SITENAME` variable into either your `pelicanconf.py` or `publishconf.py` files
 	* TODO
 
 ### Pygments
@@ -40,9 +40,6 @@ The sidebar will show the following things:
 	* If the `DISPLAY_RECENT_POSTS_ON_SIDEBAR` option to set to `True` then the recent posts are show upto a maximum of `RECENT_POST_COUNT` 
 * Tags
 	* If the `DISPLAY_TAGS_ON_SIDEBAR` option to set to `TRue` then tags are shown in a list, if `DISPLAY_TAGS_INLINE` is also set to `True` then a tagcloud is displayed instead.
-
-### Disqus comments
-* TODO
 
 ## Screenshot
 ![](screenshot.png)
