@@ -15,6 +15,7 @@ This theme uses the standard Pelican settings:
 	* `MENU_ITEMS`
 	* `LINKS` : TODO
 * Analytics & Comments
+	* `DISQUS` can be used by adding the `DISQUS_SITENAME` variable into either your `pelicanconf.py` or `publishconf.py` files
 	* TODO
 
 ### Pygments
