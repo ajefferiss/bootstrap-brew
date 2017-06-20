@@ -3,7 +3,6 @@
     {{ msg % kwargs }}
   {% endmacro %}
 {% endif %}
-
 <!DOCTYPE html>
 <html lang="{{ DEFAULT_LANG }}">
 <head>
@@ -12,6 +11,20 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="author" content="{{ AUTHOR }}">
+
+        {# Cross browser favicons need to consider several things, see: https://stackoverflow.com/a/23851464/1823022 #}
+        {% if FAVICON %}
+        <!-- Firefox, Chrome, Safari, IE 11+ and Opera use a 196x196 sized image -->
+        <link href="{{ SITEURL }}/{{ FAVICON }}" rel="icon" />
+        {% endif %}
+        {% if FAVICON_IE %}
+        <!-- For IE 9 and below. ICO should be 32x32 pixels in size -->
+        <!--[if IE]><link rel="shortcut icon" href="{{ SITEURL }}/{{ FAVICON_IE }}"><![endif]-->
+        {% endif %}
+        {% if TOUCHICON %}
+        <!-- Touch Icons - iOS and Android 2.1+ 180x180 pixels in size. -->
+        <link rel="apple-touch-icon" href="{{ SITEURL }}/{{ TOUCHICON }}">
+        {% endif %}
 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
