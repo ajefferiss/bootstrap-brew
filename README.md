@@ -28,7 +28,13 @@ This theme uses the standard Pelican settings:
 * TODO
 
 ### Favicon
-Simply set the `FAVICON` setting in `pelican.conf` to the location of your favicon, for example: `FAVICON = 'images/favicon.png'`
+To support favicons across modern browsers, touch devices and older versions of IE three different favicons are required. For full details see the stack overflow post: [HTML 5 Favicon - Support](https://stackoverflow.com/questions/23849377/html-5-favicon-support)
+
+For these three settings can be included in your pelicanconf.py:
+* FAVICON - Should be a 196x196 px image, used by Firefox, Chrome, Safari, IE 11+ and Opera.
+* FAVICON_IE - Favicon used for IE9, should be a 32x32 px images
+* TOUCHICON - Favicon used by iOS and Android 2.1+, should be 180x180 px
+
 
 ### Sidebar
 The sidebar will show the following things:
@@ -37,7 +43,7 @@ The sidebar will show the following things:
 * Categories
 	* If the `DISPLAY_CATEGORIES_ON_SIDEBAR` option is set to `True` then the recent categories are show
 * Posts
-	* If the `DISPLAY_RECENT_POSTS_ON_SIDEBAR` option to set to `True` then the recent posts are show upto a maximum of `RECENT_POST_COUNT` 
+	* If the `DISPLAY_RECENT_POSTS_ON_SIDEBAR` option to set to `True` then the recent posts are show upto a maximum of `RECENT_POST_COUNT`
 * Tags
 	* If the `DISPLAY_TAGS_ON_SIDEBAR` option to set to `TRue` then tags are shown in a list, if `DISPLAY_TAGS_INLINE` is also set to `True` then a tagcloud is displayed instead.
 
