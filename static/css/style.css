@@ -100,3 +100,24 @@ nav >.container {
 .sidebar-module-inset ol:last-child {
     margin-bottom: 0;
 }
+
+.toc {
+    float: right;
+    width: 40%;
+    background: #f3f3f3;
+    padding: 1em 2em;
+    margin: 0 0 0.5em 0.5em;
+}
+.toc ul {
+    padding: 0;
+}
+.toc li {
+    margin: 0 0 0.25em 0;
+}
+.toc a {
+    text-decoration: none;
+}
+.toc a:hover,
+.toc a:active {
+    text-decoration: underline;
+}
