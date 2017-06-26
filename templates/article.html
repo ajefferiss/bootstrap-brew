@@ -33,6 +33,12 @@
             </address>
             {% endif %}
         </div>
+        {% if article.toc %}
+        <nav role="navigation" class="toc">
+            <h3>On this page:</h3>
+            {{ article.toc }}
+        </nav>
+        {% endif %}
         <p>{{ article.content }}</p>
     </div>
 
